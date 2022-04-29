@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@keyiis/dts-bundle-generator",
   "version": "0.0.3",
   "description": "DTS Bundle Generator",
