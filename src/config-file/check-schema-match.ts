@@ -5,6 +5,7 @@ export interface PrimitiveValues {
 	requiredBoolean: true;
 	string: '';
 	requiredString: 'REQUIRED';
+	object:{}
 }
 
 export type SchemeDescriptor<T> = {
@@ -16,6 +17,7 @@ export const schemaPrimitiveValues: Readonly<PrimitiveValues> = {
 	requiredBoolean: true,
 	string: '',
 	requiredString: 'REQUIRED',
+	object:{}
 };
 
 const schemaRequiredValues = new Set([

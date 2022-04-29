@@ -16,13 +16,15 @@ const parseConfigHost: ts.ParseConfigHost = {
 	readFile: ts.sys.readFile,
 };
 
-export function getCompilerOptions(inputFileNames: readonly string[], preferredConfigPath?: string): ts.CompilerOptions {
+export function getCompilerOptions(inputFileNames: readonly string[], preferredConfigPath?: string,compilerOptions?:{[key:string]:any}): ts.CompilerOptions {
 	const configFileName = preferredConfigPath !== undefined ? preferredConfigPath : findConfig(inputFileNames);
 
 	verboseLog(`Using config: ${configFileName}`);
 
 	const configParseResult = ts.readConfigFile(configFileName, ts.sys.readFile);
 	checkDiagnosticsErrors(configParseResult.error !== undefined ? [configParseResult.error] : [], 'Error while processing tsconfig file');
+
+	if(compilerOptions) Object.assign(configParseResult.config.compilerOptions,compilerOptions);
 
 	const compilerOptionsParseResult = ts.parseJsonConfigFileContent(
 		configParseResult.config,
