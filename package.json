@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@keyiis/dts-bundle-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "DTS Bundle Generator",
   "main": "dist/bundle-generator.js",
   "typings": "dist/bundle-generator.d.ts",
@@ -13,9 +13,9 @@
   ],
   "author": "Keyiis",
   "bugs": {
-    "url": "https://github.com/timocov/dts-bundle-generator/issues"
+    "url": "https://github.com/keyiis/dts-bundle-generator/issues"
   },
-  "homepage": "https://github.com/timocov/dts-bundle-generator",
+  "homepage": "https://github.com/keyiis/dts-bundle-generator",
   "dependencies": {
     "typescript": ">=3.0.1",
     "yargs": "^17.2.1"
@@ -40,7 +40,7 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timocov/dts-bundle-generator.git"
+    "url": "git+https://github.com/keyiis/dts-bundle-generator.git"
   },
   "engines": {
     "node": ">=12.0.0"
