@@ -12,5 +12,5 @@ let dts = dtsBundleGenerator.generateDtsBundle([
     preferredConfigPath:'tsconfig.json',
     compilerOptions:myCompilerOptions
 });
-fs.writeFileSync(`${DIST_PATH}/${ENV.dtsBundle.outFile||"index.d.ts"}`,dts[0],'utf8');
+fs.writeFileSync("index.d.ts",dts[0],'utf8');
 ```
