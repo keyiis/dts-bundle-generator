@@ -16,6 +16,7 @@ jobs:
       with:
         node-version: 12
         registry-url: 'https://registry.npmjs.org/'
+        scope: '@keyiis'
     - run: npm install
     - run: npm run prepare-release
     - run: npm publish
